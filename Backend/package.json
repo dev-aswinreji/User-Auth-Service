@@ -1,0 +1,22 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "User Auth ",
+  "main": "src/app.ts",
+  "author": "Aswin Reji",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/app.ts"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.2"
+  }
+}
