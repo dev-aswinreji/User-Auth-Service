@@ -4,7 +4,7 @@ import cors from "cors"
 const app = express();
 
 app.use(cors<Request>())
-const PORT = process.env.PORT; 
+const PORT = process.env.PORT || 4000;
 console.log(PORT, "Port is showing");
 
 app.get("/login", async (req: Request, res: Response) => {
