@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
+import Signup from './pages/signup'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
       <h1>
         Hello world
       </h1>
+      <Signup />
     </>
   )
 }
