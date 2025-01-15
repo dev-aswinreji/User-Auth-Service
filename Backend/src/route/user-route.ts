@@ -1,7 +1,7 @@
-import express from "express";
+import express, { Router } from "express";
 import { userAuth } from "../controller/user-auth";
 
-const route = express.Router()
+const route: Router = express.Router()
 
 route.get('/login', userAuth)
 

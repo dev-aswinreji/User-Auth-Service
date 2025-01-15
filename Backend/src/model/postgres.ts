@@ -15,6 +15,7 @@ try {
 client.query(`CREATE TABLE IF NOT EXISTS Users (
     name varchar(100),
     age int,
+    email varchar(100),
     password varchar(200)
     )`)
 
