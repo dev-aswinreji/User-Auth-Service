@@ -4,16 +4,14 @@ import route from "./route/user-route";
 
 const app = express();
 
-// app.use(cors<Request>())
+app.use(cors<Request>())
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
+
 const PORT = process.env.PORT || 4000;
-console.log(PORT, "Port is showing");
 
-// app.use("/",route)
+app.use("/",route)
 
-app.get("/", async (req: Request, res: Response) => {
-  res.send("hello world")
-})
-
-app.listen(4000, () => {
+app.listen(PORT,() => {
   console.log(`Server is listening http://localhost:${PORT}/login`);
 });

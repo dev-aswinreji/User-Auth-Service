@@ -3,6 +3,6 @@ import { userAuth } from "../controller/user-auth";
 
 const route: Router = express.Router()
 
-route.get('/login', userAuth)
+route.post('/login', userAuth)
 
 export default route
