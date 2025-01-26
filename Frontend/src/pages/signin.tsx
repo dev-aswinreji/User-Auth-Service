@@ -17,18 +17,24 @@ export default function SignIn() {
     return (
         <>
             <div>
+                <label htmlFor="email">Email</label>
+                <br />
                 <input type="email"
                     name="email"
                     id="email"
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your email"
                 />
+                <br />
+                <label htmlFor="password">Password</label>
+                <br />
                 <input type="password"
                     name="password"
                     id="password"
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Your password"
                 />
+                <br />
                 <button onClick={HandleSignin}>Submit</button>
             </div>
         </>
