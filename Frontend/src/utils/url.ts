@@ -1,4 +1,8 @@
 
 export const backendLocator = import.meta.env.VITE_BACKEND_URL
+console.log(backendLocator, 'locator is here');
+
 export const backendPort = import.meta.env.VITE_BACKEND_PORT
-export const backendEntrypointLogin = '/login'
+console.log(backendPort);
+
+export const backendEntrypointLogin = '/signin'

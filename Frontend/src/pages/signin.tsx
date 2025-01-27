@@ -5,9 +5,12 @@ import { backendEntrypointLogin, backendLocator, backendPort } from "../utils/ur
 export default function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    console.log(email, 'email', password, 'password');
     async function HandleSignin(e: any) {
         e.preventDefault()
-        const result = await axios.post(`${backendLocator}+${backendPort}+${backendEntrypointLogin}`, {
+        console.log(`${backendLocator}${backendPort}${backendEntrypointLogin}`);
+
+        const result = await axios.post(`${backendLocator}${backendPort}${backendEntrypointLogin}`, {
             email: email,
             password: password
         })
