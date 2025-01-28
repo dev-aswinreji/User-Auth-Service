@@ -1,10 +1,12 @@
 import axios from "axios"
 import { useState } from "react"
 import { backendEntrypointLogin, backendLocator, backendPort } from "../utils/url"
+import { useNavigate } from "react-router-dom"
 
 export default function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
     console.log(email, 'email', password, 'password');
     async function HandleSignin(e: any) {
         e.preventDefault()
@@ -16,6 +18,9 @@ export default function SignIn() {
         })
 
         console.log(result, 'result is showing here in login page');
+        if (result.data.message) {
+            navigate("/home")
+        }
     }
     return (
         <>
