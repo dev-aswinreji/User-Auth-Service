@@ -9,7 +9,6 @@ export default async function userSignin(req: Request, res: Response) {
 
     const isUserExist = await client.query(`SELECT email,password FROM Users WHERE email='${email}'`)
 
-    console.log(isUserExist.rows[0], 'user data');
     const isEmailExist = isUserExist.rows[0]?.email ? isUserExist.rows[0].password : ""
 
     let result
