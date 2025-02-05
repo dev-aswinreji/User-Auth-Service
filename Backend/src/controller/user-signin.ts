@@ -5,7 +5,6 @@ import client from "../model/postgres"
 export default async function userSignin(req: Request, res: Response) {
 
     const { email, password } = req.body
-    console.log(email, password, 'is showing here');
 
     const isUserExist = await client.query(`SELECT email,password FROM Users WHERE email='${email}'`)
 
