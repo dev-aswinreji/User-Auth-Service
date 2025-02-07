@@ -1,5 +1,4 @@
 import { Request, Response } from "express"
-import querying from "../model/postgres"
 import client from "../model/postgres"
 
 export default async function userSignin(req: Request, res: Response) {
