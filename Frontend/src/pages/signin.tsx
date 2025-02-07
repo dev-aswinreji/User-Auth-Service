@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
-import { backendEntrypointLogin, backendLocator, backendPort } from "../utils/url"
+import { backendLocator, backendPort, backendSigninEntrypoint } from "../utils/url"
 import { useNavigate } from "react-router-dom"
 
 export default function SignIn() {
@@ -10,9 +10,7 @@ export default function SignIn() {
     console.log(email, 'email', password, 'password');
     async function HandleSignin(e: any) {
         e.preventDefault()
-        console.log(`${backendLocator}${backendPort}${backendEntrypointLogin}`);
-
-        const result = await axios.post(`${backendLocator}${backendPort}${backendEntrypointLogin}`, {
+        const result = await axios.post(`${backendLocator}${backendPort}${backendSigninEntrypoint}`, {
             email: email,
             password: password
         })

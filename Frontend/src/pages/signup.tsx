@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import { backendLocator, backendPort, backendSignupEntrypoint } from "../utils/url"
 
 export default function Signup() {
   const [name, setName] = useState("")
@@ -11,7 +12,7 @@ export default function Signup() {
     console.log("handle signup is working");
 
     e.preventDefault()
-    const result = await axios.post("http://localhost:4000/login", {
+    const result = await axios.post(`${backendLocator}${backendPort}${backendSignupEntrypoint}`, {
       email: email,
       name: name,
       password: password
